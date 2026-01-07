@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: external-team-catalog
+  description: External team catalog from bkstg-demo-external repository
+spec:
+  type: url
+  targets:
+    - https://github.com/i2y/bkstg-demo-external/blob/main/catalogs/components/payment-service.yaml
+    - https://github.com/i2y/bkstg-demo-external/blob/main/catalogs/components/notification-service.yaml
+    - https://github.com/i2y/bkstg-demo-external/blob/main/catalogs/apis/payment-api.yaml
