@@ -32,13 +32,21 @@ spec:
   ranks:
   - id: production_readiness
     name: Production Readiness
-    description: Readiness for production deployment
+    description: Readiness for production deployment (conditional rules demo)
     target_kinds:
     - Component
     score_refs:
     - security
     - testing
-    formula: min(security, testing)
+    entity_refs:
+    - lifecycle
+    - type
+    rules:
+    - condition: "entity.lifecycle == 'production'"
+      formula: "security * 0.7 + testing * 0.3"
+    - condition: "entity.type == 'service'"
+      formula: "security * 0.5 + testing * 0.5"
+    - formula: "min(security, testing)"
     thresholds:
     - min: 90.0
       label: Ready
@@ -48,22 +56,25 @@ spec:
       label: Not Ready
   - id: tech_health
     name: Tech Health Rank
-    description: Overall technical health score
+    description: Overall technical health (label function demo)
     target_kinds:
     - Component
     score_refs:
     - security
     - documentation
     - testing
-    formula: security * 0.4 + documentation * 0.3 + testing * 0.3
-    thresholds:
-    - min: 90.0
-      label: S
-    - min: 80.0
-      label: A
-    - min: 70.0
-      label: B
-    - min: 60.0
-      label: C
-    - min: 0.0
-      label: D
+    entity_refs:
+    - lifecycle
+    - tags
+    label_function: |
+      total = security * 0.4 + documentation * 0.3 + testing * 0.3
+      if total >= 90:
+          return 'S'
+      elif total >= 80:
+          return 'A'
+      elif entity.lifecycle == 'production':
+          return 'B'
+      elif 'critical' in entity.tags:
+          return 'C'
+      else:
+          return 'D'
