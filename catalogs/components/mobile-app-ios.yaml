@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: mobile-app-ios
+  title: iOS Mobile App
+  description: Native iOS mobile application
+  tags:
+    - mobile
+    - ios
+    - swift
+  scores:
+    - score_id: security
+      value: 90
+      reason: App store security review passed
+    - score_id: documentation
+      value: 70
+      reason: Basic docs available
+    - score_id: testing
+      value: 65
+      reason: UI tests need improvement
+spec:
+  type: mobile-app
+  lifecycle: production
+  owner: group:default/mobile-team
+  dependsOn:
+    - component:default/api-gateway

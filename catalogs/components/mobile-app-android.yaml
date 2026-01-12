@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: mobile-app-android
+  title: Android Mobile App
+  description: Native Android mobile application
+  tags:
+    - mobile
+    - android
+    - kotlin
+  scores:
+    - score_id: security
+      value: 88
+      reason: Play store security review passed
+    - score_id: documentation
+      value: 72
+      reason: API integration docs available
+    - score_id: testing
+      value: 60
+      reason: More instrumentation tests needed
+spec:
+  type: mobile-app
+  lifecycle: production
+  owner: group:default/mobile-team
+  dependsOn:
+    - component:default/api-gateway

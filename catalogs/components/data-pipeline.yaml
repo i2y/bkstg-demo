@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: data-pipeline
+  title: Data Pipeline
+  description: ETL data pipeline for analytics
+  tags:
+    - data
+    - etl
+    - spark
+  scores:
+    - score_id: security
+      value: 85
+      reason: Data encryption at rest
+    - score_id: documentation
+      value: 68
+      reason: Pipeline docs need update
+    - score_id: testing
+      value: 72
+      reason: Integration tests available
+spec:
+  type: service
+  lifecycle: production
+  owner: group:default/data-team
+  dependsOn:
+    - resource:default/postgres-db

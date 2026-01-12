@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: auth-api
+  title: Authentication API
+  description: OAuth2/OIDC compliant authentication API
+  tags:
+    - security
+    - oauth
+  scores:
+    - score_id: security
+      value: 98
+      reason: OAuth2 compliant
+    - score_id: documentation
+      value: 95
+      reason: OpenAPI spec available
+    - score_id: testing
+      value: 90
+      reason: Contract tests in place
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:default/backend-team
+  system: backend-platform

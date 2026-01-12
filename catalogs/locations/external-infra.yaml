@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: infra-team-catalog
+  description: Infrastructure team catalog from bkstg-demo-external-2 repository
+spec:
+  type: url
+  targets:
+    - https://github.com/i2y/bkstg-demo-external-2/blob/main/catalogs/groups/infra-team.yaml
+    - https://github.com/i2y/bkstg-demo-external-2/blob/main/catalogs/components/kubernetes-operator.yaml
+    - https://github.com/i2y/bkstg-demo-external-2/blob/main/catalogs/components/monitoring-stack.yaml
+    - https://github.com/i2y/bkstg-demo-external-2/blob/main/catalogs/components/cicd-pipeline.yaml

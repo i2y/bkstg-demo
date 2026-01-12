@@ -6,7 +6,9 @@ metadata:
   description: Team responsible for platform infrastructure
 spec:
   type: team
-  children: []
+  children:
+    - group:default/frontend-team
+    - group:default/backend-team
   members:
     - alice
     - bob

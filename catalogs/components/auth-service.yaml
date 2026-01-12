@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: auth-service
+  title: Authentication Service
+  description: Centralized authentication and authorization service
+  tags:
+    - backend
+    - security
+    - oauth
+  scores:
+    - score_id: security
+      value: 98
+      reason: Comprehensive security audit passed
+    - score_id: documentation
+      value: 92
+      reason: Full API and integration docs
+    - score_id: testing
+      value: 95
+      reason: Excellent test coverage
+spec:
+  type: service
+  lifecycle: production
+  owner: group:default/backend-team
+  system: backend-platform
+  providesApis:
+    - auth-api

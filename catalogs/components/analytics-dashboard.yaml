@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: analytics-dashboard
+  title: Analytics Dashboard
+  description: Business intelligence and analytics dashboard
+  tags:
+    - data
+    - analytics
+    - visualization
+  scores:
+    - score_id: security
+      value: 80
+      reason: Role-based access control
+    - score_id: documentation
+      value: 65
+      reason: User guide available
+    - score_id: testing
+      value: 55
+      reason: Manual testing only
+spec:
+  type: website
+  lifecycle: experimental
+  owner: group:default/data-team
+  dependsOn:
+    - component:default/data-pipeline

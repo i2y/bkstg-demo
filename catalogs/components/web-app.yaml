@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: web-app
+  title: Web Application
+  description: Main web application frontend
+  tags:
+    - frontend
+    - react
+  scores:
+    - score_id: security
+      value: 82
+      reason: CSP headers configured
+    - score_id: documentation
+      value: 75
+      reason: Component docs available
+    - score_id: testing
+      value: 85
+      reason: Good unit test coverage
+spec:
+  type: website
+  lifecycle: production
+  owner: group:default/frontend-team
+  system: backend-platform
+  dependsOn:
+    - component:default/api-gateway

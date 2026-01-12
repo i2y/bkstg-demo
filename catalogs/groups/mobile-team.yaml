@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: mobile-team
+  title: Mobile Team
+  description: Team responsible for mobile applications (iOS, Android)
+spec:
+  type: team
+  parent: group:default/frontend-team
+  children: []
+  members: []

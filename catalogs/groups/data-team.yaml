@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: data-team
+  title: Data Team
+  description: Team responsible for data pipelines and analytics
+spec:
+  type: team
+  parent: group:default/backend-team
+  children: []
+  members: []

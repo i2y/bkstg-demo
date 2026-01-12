@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: backend-team
+  title: Backend Team
+  description: Team responsible for backend services and APIs
+spec:
+  type: team
+  parent: group:default/platform-team
+  children:
+    - group:default/data-team
+  members: []
