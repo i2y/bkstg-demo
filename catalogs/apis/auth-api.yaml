@@ -22,3 +22,15 @@ spec:
   lifecycle: production
   owner: group:default/backend-team
   system: backend-platform
+  definition: |
+    openapi: 3.0.0
+    info:
+      title: Authentication API
+      version: 1.0.0
+    paths:
+      /auth/token:
+        post:
+          summary: Get access token
+      /auth/refresh:
+        post:
+          summary: Refresh access token
