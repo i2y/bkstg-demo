@@ -24,3 +24,4 @@ spec:
   owner: group:default/data-team
   dependsOn:
     - component:default/data-pipeline
+# PR test Wed Jan 14 07:54:32 JST 2026
