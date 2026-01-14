@@ -1,12 +1,21 @@
 definition_id: tech-health
 definition_type: scorecard
 entries:
-  - timestamp: "2025-06-01T09:00:00Z"
+  - timestamp: "2025-03-01T09:00:00Z"
     change_type: created
-    description: "Initial scorecard creation with documentation, testing scores"
+    description: "Initial Tech Health scorecard created with documentation and testing scores"
+  - timestamp: "2025-04-15T14:00:00Z"
+    change_type: modified
+    description: "Added maintainability score to track code quality"
+  - timestamp: "2025-06-01T10:00:00Z"
+    change_type: modified
+    description: "Created tech_health rank combining all three scores"
   - timestamp: "2025-08-15T14:00:00Z"
     change_type: modified
-    description: "Added maintainability score and adjusted weights"
+    description: "Adjusted formula weights: documentation 30%, testing 40%, maintainability 30%"
   - timestamp: "2025-10-01T10:00:00Z"
     change_type: modified
-    description: "Updated threshold values for tech_health rank"
+    description: "Updated thresholds - S rank now requires 90+ (was 95)"
+  - timestamp: "2025-12-01T09:00:00Z"
+    change_type: modified
+    description: "Added description field to scorecard metadata"

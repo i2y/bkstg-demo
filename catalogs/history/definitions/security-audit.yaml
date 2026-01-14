@@ -1,9 +1,21 @@
 definition_id: security-audit
 definition_type: scorecard
 entries:
-  - timestamp: "2025-07-01T09:00:00Z"
+  - timestamp: "2025-04-01T09:00:00Z"
     change_type: created
-    description: "Initial security audit scorecard with vulnerability, compliance, access_control"
+    description: "Initial Security Audit scorecard created for compliance tracking"
+  - timestamp: "2025-05-15T14:00:00Z"
+    change_type: modified
+    description: "Added vulnerability and access_control scores"
+  - timestamp: "2025-07-01T09:00:00Z"
+    change_type: modified
+    description: "Created security_grade rank with weighted formula"
   - timestamp: "2025-09-01T14:00:00Z"
     change_type: modified
-    description: "Adjusted security_grade thresholds for stricter grading"
+    description: "Adjusted thresholds for stricter grading - S requires 95+"
+  - timestamp: "2025-11-01T10:00:00Z"
+    change_type: modified
+    description: "Updated formula weights: vulnerability 50%, compliance 30%, access_control 20%"
+  - timestamp: "2025-12-15T09:00:00Z"
+    change_type: modified
+    description: "Extended target_kinds to include API entities"

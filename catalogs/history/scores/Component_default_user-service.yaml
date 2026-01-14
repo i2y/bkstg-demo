@@ -1,40 +1,148 @@
 entity_id: Component:default/user-service
 entries:
-  # Tech Health - documentation
+  # Tech Health - documentation history
   - score_id: documentation
     scorecard_id: tech-health
-    timestamp: "2025-10-15T10:00:00Z"
-    old_value: 60
+    timestamp: "2025-06-01T10:00:00Z"
+    old_value: 45
+    new_value: 55
+    old_reason: "Minimal documentation"
+    new_reason: "README improved"
+  - score_id: documentation
+    scorecard_id: tech-health
+    timestamp: "2025-07-15T14:30:00Z"
+    old_value: 55
+    new_value: 62
+    old_reason: "README improved"
+    new_reason: "API docs started"
+  - score_id: documentation
+    scorecard_id: tech-health
+    timestamp: "2025-09-01T10:00:00Z"
+    old_value: 62
     new_value: 70
-    old_reason: "Basic docs available"
-    new_reason: "API docs added"
+    old_reason: "API docs started"
+    new_reason: "API docs complete"
   - score_id: documentation
     scorecard_id: tech-health
-    timestamp: "2025-12-20T14:30:00Z"
+    timestamp: "2025-11-15T14:30:00Z"
     old_value: 70
     new_value: 75
-    old_reason: "API docs added"
+    old_reason: "API docs complete"
     new_reason: "API docs complete, architecture docs pending"
-  # Tech Health - testing
+  # Tech Health - testing history
+  - score_id: testing
+    scorecard_id: tech-health
+    timestamp: "2025-05-15T09:00:00Z"
+    old_value: 65
+    new_value: 72
+    old_reason: "Basic tests"
+    new_reason: "Added integration tests"
+  - score_id: testing
+    scorecard_id: tech-health
+    timestamp: "2025-07-01T09:00:00Z"
+    old_value: 72
+    new_value: 80
+    old_reason: "Added integration tests"
+    new_reason: "80% coverage"
+  - score_id: testing
+    scorecard_id: tech-health
+    timestamp: "2025-09-20T09:00:00Z"
+    old_value: 80
+    new_value: 88
+    old_reason: "80% coverage"
+    new_reason: "90% coverage"
   - score_id: testing
     scorecard_id: tech-health
     timestamp: "2025-11-01T09:00:00Z"
-    old_value: 80
+    old_value: 88
     new_value: 92
-    old_reason: "Good coverage"
+    old_reason: "90% coverage"
     new_reason: "95% code coverage"
-  # Security Audit - vulnerability
+  # Tech Health - maintainability history
+  - score_id: maintainability
+    scorecard_id: tech-health
+    timestamp: "2025-06-15T11:00:00Z"
+    old_value: 60
+    new_value: 68
+    old_reason: "Legacy code"
+    new_reason: "Started refactoring"
+  - score_id: maintainability
+    scorecard_id: tech-health
+    timestamp: "2025-08-20T11:00:00Z"
+    old_value: 68
+    new_value: 75
+    old_reason: "Started refactoring"
+    new_reason: "Major refactor complete"
+  - score_id: maintainability
+    scorecard_id: tech-health
+    timestamp: "2025-10-10T11:00:00Z"
+    old_value: 75
+    new_value: 80
+    old_reason: "Major refactor complete"
+    new_reason: "Good code quality, minor tech debt"
+  # Security Audit - vulnerability history
+  - score_id: vulnerability
+    scorecard_id: security-audit
+    timestamp: "2025-05-01T11:00:00Z"
+    old_value: 60
+    new_value: 70
+    old_reason: "Multiple vulnerabilities"
+    new_reason: "Critical issues fixed"
+  - score_id: vulnerability
+    scorecard_id: security-audit
+    timestamp: "2025-07-15T11:00:00Z"
+    old_value: 70
+    new_value: 78
+    old_reason: "Critical issues fixed"
+    new_reason: "Major issues fixed"
   - score_id: vulnerability
     scorecard_id: security-audit
     timestamp: "2025-09-10T11:00:00Z"
-    old_value: 75
+    old_value: 78
     new_value: 88
-    old_reason: "Several issues found"
+    old_reason: "Major issues fixed"
     new_reason: "No critical vulnerabilities, 2 medium issues"
+  # Security Audit - compliance history
+  - score_id: compliance
+    scorecard_id: security-audit
+    timestamp: "2025-06-01T15:00:00Z"
+    old_value: 70
+    new_value: 80
+    old_reason: "Partial compliance"
+    new_reason: "Most requirements met"
+  - score_id: compliance
+    scorecard_id: security-audit
+    timestamp: "2025-08-15T15:00:00Z"
+    old_value: 80
+    new_value: 90
+    old_reason: "Most requirements met"
+    new_reason: "SOC2 audit in progress"
   - score_id: compliance
     scorecard_id: security-audit
     timestamp: "2025-10-01T15:00:00Z"
-    old_value: 85
+    old_value: 90
     new_value: 95
-    old_reason: "Partial compliance"
+    old_reason: "SOC2 audit in progress"
     new_reason: "SOC2 compliant"
+  # Security Audit - access_control history
+  - score_id: access_control
+    scorecard_id: security-audit
+    timestamp: "2025-05-20T13:00:00Z"
+    old_value: 70
+    new_value: 78
+    old_reason: "Basic auth"
+    new_reason: "OAuth2 implemented"
+  - score_id: access_control
+    scorecard_id: security-audit
+    timestamp: "2025-08-01T13:00:00Z"
+    old_value: 78
+    new_value: 85
+    old_reason: "OAuth2 implemented"
+    new_reason: "RBAC added"
+  - score_id: access_control
+    scorecard_id: security-audit
+    timestamp: "2025-10-15T13:00:00Z"
+    old_value: 85
+    new_value: 90
+    old_reason: "RBAC added"
+    new_reason: "OAuth2 + RBAC implemented"

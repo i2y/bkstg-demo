@@ -1,40 +1,141 @@
 entity_id: Component:default/api-gateway
 entries:
-  # Tech Health - documentation
+  # Tech Health - documentation history
   - score_id: documentation
     scorecard_id: tech-health
-    timestamp: "2025-08-15T10:00:00Z"
-    old_value: 70
-    new_value: 80
-    old_reason: "Basic docs"
-    new_reason: "OpenAPI specs added"
+    timestamp: "2025-05-01T10:00:00Z"
+    old_value: 55
+    new_value: 65
+    old_reason: "Basic README"
+    new_reason: "OpenAPI spec added"
+  - score_id: documentation
+    scorecard_id: tech-health
+    timestamp: "2025-07-01T10:00:00Z"
+    old_value: 65
+    new_value: 75
+    old_reason: "OpenAPI spec added"
+    new_reason: "Integration guide added"
+  - score_id: documentation
+    scorecard_id: tech-health
+    timestamp: "2025-09-15T10:00:00Z"
+    old_value: 75
+    new_value: 82
+    old_reason: "Integration guide added"
+    new_reason: "Troubleshooting docs"
   - score_id: documentation
     scorecard_id: tech-health
     timestamp: "2025-11-20T14:30:00Z"
-    old_value: 80
+    old_value: 82
     new_value: 88
-    old_reason: "OpenAPI specs added"
+    old_reason: "Troubleshooting docs"
     new_reason: "Comprehensive API docs available"
-  # Tech Health - testing
+  # Tech Health - testing history
+  - score_id: testing
+    scorecard_id: tech-health
+    timestamp: "2025-06-01T09:00:00Z"
+    old_value: 50
+    new_value: 60
+    old_reason: "Unit tests only"
+    new_reason: "Added smoke tests"
+  - score_id: testing
+    scorecard_id: tech-health
+    timestamp: "2025-08-15T09:00:00Z"
+    old_value: 60
+    new_value: 70
+    old_reason: "Added smoke tests"
+    new_reason: "E2E tests added"
   - score_id: testing
     scorecard_id: tech-health
     timestamp: "2025-10-01T09:00:00Z"
-    old_value: 65
+    old_value: 70
     new_value: 78
-    old_reason: "Unit tests only"
+    old_reason: "E2E tests added"
     new_reason: "Integration tests need improvement"
-  # Security Audit - vulnerability
+  # Tech Health - maintainability history
+  - score_id: maintainability
+    scorecard_id: tech-health
+    timestamp: "2025-05-15T11:00:00Z"
+    old_value: 70
+    new_value: 75
+    old_reason: "Monolithic"
+    new_reason: "Started modularization"
+  - score_id: maintainability
+    scorecard_id: tech-health
+    timestamp: "2025-08-01T11:00:00Z"
+    old_value: 75
+    new_value: 80
+    old_reason: "Started modularization"
+    new_reason: "Plugin architecture"
+  - score_id: maintainability
+    scorecard_id: tech-health
+    timestamp: "2025-10-20T11:00:00Z"
+    old_value: 80
+    new_value: 85
+    old_reason: "Plugin architecture"
+    new_reason: "Well-structured codebase"
+  # Security Audit - vulnerability history
   - score_id: vulnerability
     scorecard_id: security-audit
-    timestamp: "2025-07-01T11:00:00Z"
-    old_value: 80
+    timestamp: "2025-04-01T11:00:00Z"
+    old_value: 75
+    new_value: 82
+    old_reason: "Some CVEs"
+    new_reason: "CVEs patched"
+  - score_id: vulnerability
+    scorecard_id: security-audit
+    timestamp: "2025-06-15T11:00:00Z"
+    old_value: 82
+    new_value: 88
+    old_reason: "CVEs patched"
+    new_reason: "Security hardening"
+  - score_id: vulnerability
+    scorecard_id: security-audit
+    timestamp: "2025-09-01T11:00:00Z"
+    old_value: 88
     new_value: 95
-    old_reason: "Minor vulnerabilities"
+    old_reason: "Security hardening"
     new_reason: "All security checks passed"
+  # Security Audit - compliance history
+  - score_id: compliance
+    scorecard_id: security-audit
+    timestamp: "2025-05-01T15:00:00Z"
+    old_value: 75
+    new_value: 82
+    old_reason: "Basic compliance"
+    new_reason: "PCI-DSS progress"
+  - score_id: compliance
+    scorecard_id: security-audit
+    timestamp: "2025-07-15T15:00:00Z"
+    old_value: 82
+    new_value: 88
+    old_reason: "PCI-DSS progress"
+    new_reason: "PCI-DSS Level 2"
+  - score_id: compliance
+    scorecard_id: security-audit
+    timestamp: "2025-10-01T15:00:00Z"
+    old_value: 88
+    new_value: 92
+    old_reason: "PCI-DSS Level 2"
+    new_reason: "PCI-DSS compliant"
+  # Security Audit - access_control history
   - score_id: access_control
     scorecard_id: security-audit
-    timestamp: "2025-09-15T15:00:00Z"
-    old_value: 90
+    timestamp: "2025-04-15T13:00:00Z"
+    old_value: 80
+    new_value: 88
+    old_reason: "OAuth2 only"
+    new_reason: "Added rate limiting"
+  - score_id: access_control
+    scorecard_id: security-audit
+    timestamp: "2025-07-01T13:00:00Z"
+    old_value: 88
+    new_value: 94
+    old_reason: "Added rate limiting"
+    new_reason: "mTLS added"
+  - score_id: access_control
+    scorecard_id: security-audit
+    timestamp: "2025-09-15T13:00:00Z"
+    old_value: 94
     new_value: 98
-    old_reason: "OAuth2 + rate limiting"
+    old_reason: "mTLS added"
     new_reason: "mTLS + OAuth2 + rate limiting"

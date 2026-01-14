@@ -1,25 +1,53 @@
 entity_id: Component:default/api-gateway
 entries:
-  # Tech Health Rank
+  # Tech Health Rank history
+  - rank_id: tech_health
+    scorecard_id: tech-health
+    timestamp: "2025-05-15T12:00:00Z"
+    old_label: C
+    new_label: C
+    old_value: 60.0
+    new_value: 65.0
+  - rank_id: tech_health
+    scorecard_id: tech-health
+    timestamp: "2025-07-01T12:00:00Z"
+    old_label: C
+    new_label: B
+    old_value: 65.0
+    new_value: 72.0
   - rank_id: tech_health
     scorecard_id: tech-health
     timestamp: "2025-09-01T12:00:00Z"
     old_label: B
-    new_label: A
+    new_label: B
     old_value: 72.0
-    new_value: 82.0
+    new_value: 78.0
   - rank_id: tech_health
     scorecard_id: tech-health
     timestamp: "2025-11-15T12:00:00Z"
-    old_label: A
+    old_label: B
     new_label: A
-    old_value: 82.0
+    old_value: 78.0
     new_value: 83.2
-  # Security Grade
+  # Security Grade history
   - rank_id: security_grade
     scorecard_id: security-audit
-    timestamp: "2025-08-01T12:00:00Z"
+    timestamp: "2025-04-15T12:00:00Z"
+    old_label: B
+    new_label: A
+    old_value: 78.0
+    new_value: 85.0
+  - rank_id: security_grade
+    scorecard_id: security-audit
+    timestamp: "2025-06-15T12:00:00Z"
+    old_label: A
+    new_label: A
+    old_value: 85.0
+    new_value: 88.5
+  - rank_id: security_grade
+    scorecard_id: security-audit
+    timestamp: "2025-09-01T12:00:00Z"
     old_label: A
     new_label: S
-    old_value: 88.0
+    old_value: 88.5
     new_value: 95.1

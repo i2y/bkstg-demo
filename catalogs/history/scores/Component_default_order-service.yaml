@@ -1,40 +1,141 @@
 entity_id: Component:default/order-service
 entries:
-  # Tech Health - documentation
+  # Tech Health - documentation history
   - score_id: documentation
     scorecard_id: tech-health
-    timestamp: "2025-06-01T10:00:00Z"
-    old_value: 40
-    new_value: 50
-    old_reason: "Minimal docs"
+    timestamp: "2025-04-01T10:00:00Z"
+    old_value: 30
+    new_value: 38
+    old_reason: "No docs"
+    new_reason: "Basic README"
+  - score_id: documentation
+    scorecard_id: tech-health
+    timestamp: "2025-06-15T10:00:00Z"
+    old_value: 38
+    new_value: 45
+    old_reason: "Basic README"
     new_reason: "README updated"
   - score_id: documentation
     scorecard_id: tech-health
-    timestamp: "2025-09-15T14:30:00Z"
+    timestamp: "2025-08-01T10:00:00Z"
+    old_value: 45
+    new_value: 50
+    old_reason: "README updated"
+    new_reason: "API overview added"
+  - score_id: documentation
+    scorecard_id: tech-health
+    timestamp: "2025-10-15T14:30:00Z"
     old_value: 50
     new_value: 55
-    old_reason: "README updated"
+    old_reason: "API overview added"
     new_reason: "Documentation needs update"
-  # Tech Health - testing
+  # Tech Health - testing history
   - score_id: testing
     scorecard_id: tech-health
-    timestamp: "2025-08-01T09:00:00Z"
-    old_value: 55
+    timestamp: "2025-05-01T09:00:00Z"
+    old_value: 40
+    new_value: 50
+    old_reason: "Minimal tests"
+    new_reason: "Added unit tests"
+  - score_id: testing
+    scorecard_id: tech-health
+    timestamp: "2025-07-15T09:00:00Z"
+    old_value: 50
+    new_value: 58
+    old_reason: "Added unit tests"
+    new_reason: "60% coverage"
+  - score_id: testing
+    scorecard_id: tech-health
+    timestamp: "2025-09-01T09:00:00Z"
+    old_value: 58
     new_value: 65
-    old_reason: "Low coverage"
+    old_reason: "60% coverage"
     new_reason: "Unit tests at 68% coverage"
-  # Security Audit - vulnerability
+  # Tech Health - maintainability history
+  - score_id: maintainability
+    scorecard_id: tech-health
+    timestamp: "2025-04-15T11:00:00Z"
+    old_value: 40
+    new_value: 48
+    old_reason: "Spaghetti code"
+    new_reason: "Some cleanup"
+  - score_id: maintainability
+    scorecard_id: tech-health
+    timestamp: "2025-07-01T11:00:00Z"
+    old_value: 48
+    new_value: 55
+    old_reason: "Some cleanup"
+    new_reason: "Partial refactor"
+  - score_id: maintainability
+    scorecard_id: tech-health
+    timestamp: "2025-10-01T11:00:00Z"
+    old_value: 55
+    new_value: 58
+    old_reason: "Partial refactor"
+    new_reason: "Legacy code needs refactoring"
+  # Security Audit - vulnerability history
+  - score_id: vulnerability
+    scorecard_id: security-audit
+    timestamp: "2025-05-15T11:00:00Z"
+    old_value: 50
+    new_value: 58
+    old_reason: "Many vulnerabilities"
+    new_reason: "Critical fixed"
+  - score_id: vulnerability
+    scorecard_id: security-audit
+    timestamp: "2025-08-01T11:00:00Z"
+    old_value: 58
+    new_value: 65
+    old_reason: "Critical fixed"
+    new_reason: "High severity fixed"
   - score_id: vulnerability
     scorecard_id: security-audit
     timestamp: "2025-10-20T11:00:00Z"
     old_value: 65
     new_value: 72
-    old_reason: "Several issues"
+    old_reason: "High severity fixed"
     new_reason: "Pending security review"
+  # Security Audit - compliance history
+  - score_id: compliance
+    scorecard_id: security-audit
+    timestamp: "2025-06-01T15:00:00Z"
+    old_value: 55
+    new_value: 65
+    old_reason: "Non-compliant"
+    new_reason: "Working on compliance"
+  - score_id: compliance
+    scorecard_id: security-audit
+    timestamp: "2025-09-01T15:00:00Z"
+    old_value: 65
+    new_value: 75
+    old_reason: "Working on compliance"
+    new_reason: "Partial compliance"
   - score_id: compliance
     scorecard_id: security-audit
     timestamp: "2025-11-01T15:00:00Z"
-    old_value: 70
+    old_value: 75
     new_value: 80
-    old_reason: "Needs work"
+    old_reason: "Partial compliance"
     new_reason: "Basic compliance met"
+  # Security Audit - access_control history
+  - score_id: access_control
+    scorecard_id: security-audit
+    timestamp: "2025-05-01T13:00:00Z"
+    old_value: 55
+    new_value: 62
+    old_reason: "API keys only"
+    new_reason: "Token validation"
+  - score_id: access_control
+    scorecard_id: security-audit
+    timestamp: "2025-08-15T13:00:00Z"
+    old_value: 62
+    new_value: 70
+    old_reason: "Token validation"
+    new_reason: "JWT implemented"
+  - score_id: access_control
+    scorecard_id: security-audit
+    timestamp: "2025-10-15T13:00:00Z"
+    old_value: 70
+    new_value: 75
+    old_reason: "JWT implemented"
+    new_reason: "API key auth, needs upgrade to OAuth"

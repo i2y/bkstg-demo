@@ -1,25 +1,67 @@
 entity_id: Component:default/user-service
 entries:
-  # Tech Health Rank
+  # Tech Health Rank history
   - rank_id: tech_health
     scorecard_id: tech-health
-    timestamp: "2025-10-01T12:00:00Z"
+    timestamp: "2025-06-01T12:00:00Z"
+    old_label: D
+    new_label: C
+    old_value: 55.0
+    new_value: 62.0
+  - rank_id: tech_health
+    scorecard_id: tech-health
+    timestamp: "2025-07-15T12:00:00Z"
+    old_label: C
+    new_label: C
+    old_value: 62.0
+    new_value: 68.0
+  - rank_id: tech_health
+    scorecard_id: tech-health
+    timestamp: "2025-09-01T12:00:00Z"
+    old_label: C
+    new_label: B
+    old_value: 68.0
+    new_value: 75.0
+  - rank_id: tech_health
+    scorecard_id: tech-health
+    timestamp: "2025-10-15T12:00:00Z"
     old_label: B
     new_label: A
     old_value: 75.0
-    new_value: 82.0
+    new_value: 80.5
   - rank_id: tech_health
     scorecard_id: tech-health
     timestamp: "2025-12-01T12:00:00Z"
     old_label: A
     new_label: A
-    old_value: 82.0
-    new_value: 83.5
-  # Security Grade
+    old_value: 80.5
+    new_value: 82.2
+  # Security Grade history
+  - rank_id: security_grade
+    scorecard_id: security-audit
+    timestamp: "2025-05-15T12:00:00Z"
+    old_label: C
+    new_label: B
+    old_value: 65.0
+    new_value: 72.0
+  - rank_id: security_grade
+    scorecard_id: security-audit
+    timestamp: "2025-07-01T12:00:00Z"
+    old_label: B
+    new_label: B
+    old_value: 72.0
+    new_value: 78.5
   - rank_id: security_grade
     scorecard_id: security-audit
     timestamp: "2025-09-15T12:00:00Z"
     old_label: B
     new_label: A
-    old_value: 78.0
+    old_value: 78.5
+    new_value: 86.5
+  - rank_id: security_grade
+    scorecard_id: security-audit
+    timestamp: "2025-11-01T12:00:00Z"
+    old_label: A
+    new_label: A
+    old_value: 86.5
     new_value: 90.5
