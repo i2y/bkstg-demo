@@ -12,15 +12,32 @@ metadata:
       title: GitHub
       icon: github
   scores:
-    - score_id: security
-      value: 95
-      reason: All security checks passed
+    # Tech Health Scorecard
     - score_id: documentation
+      scorecard_id: tech-health
       value: 88
       reason: Comprehensive API docs available
     - score_id: testing
+      scorecard_id: tech-health
       value: 78
       reason: Integration tests need improvement
+    - score_id: maintainability
+      scorecard_id: tech-health
+      value: 85
+      reason: Well-structured codebase
+    # Security Audit Scorecard
+    - score_id: vulnerability
+      scorecard_id: security-audit
+      value: 95
+      reason: All security checks passed
+    - score_id: compliance
+      scorecard_id: security-audit
+      value: 92
+      reason: PCI-DSS compliant
+    - score_id: access_control
+      scorecard_id: security-audit
+      value: 98
+      reason: mTLS + OAuth2 + rate limiting
 spec:
   type: service
   lifecycle: production

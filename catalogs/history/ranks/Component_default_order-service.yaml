@@ -1,59 +1,25 @@
-entity_id: "Component:default/order-service"
-ranks:
-  tech_health:
-    entries:
-      - timestamp: "2025-10-01T10:00:00Z"
-        value: 43.5
-        label: "D"
-        score_snapshot:
-          security: 55
-          documentation: 30
-          testing: 45
-      - timestamp: "2025-10-28T12:00:00Z"
-        value: 53.2
-        label: "D"
-        score_snapshot:
-          security: 62
-          documentation: 42
-          testing: 55
-      - timestamp: "2025-11-18T14:00:00Z"
-        value: 62.6
-        label: "C"
-        score_snapshot:
-          security: 70
-          documentation: 52
-          testing: 65
-      - timestamp: "2025-12-08T11:00:00Z"
-        value: 68.3
-        label: "C"
-        score_snapshot:
-          security: 75
-          documentation: 58
-          testing: 72
-      - timestamp: "2025-12-26T16:00:00Z"
-        value: 74.0
-        label: "B"
-        score_snapshot:
-          security: 78
-          documentation: 65
-          testing: 78
-  production_readiness:
-    entries:
-      - timestamp: "2025-10-01T10:00:00Z"
-        value: 45
-        label: "Not Ready"
-        score_snapshot:
-          security: 55
-          testing: 45
-      - timestamp: "2025-11-18T14:00:00Z"
-        value: 65
-        label: "Not Ready"
-        score_snapshot:
-          security: 70
-          testing: 65
-      - timestamp: "2025-12-26T16:00:00Z"
-        value: 78
-        label: "Almost"
-        score_snapshot:
-          security: 78
-          testing: 78
+entity_id: Component:default/order-service
+entries:
+  # Tech Health Rank
+  - rank_id: tech_health
+    scorecard_id: tech-health
+    timestamp: "2025-07-01T12:00:00Z"
+    old_label: D
+    new_label: C
+    old_value: 50.0
+    new_value: 58.0
+  - rank_id: tech_health
+    scorecard_id: tech-health
+    timestamp: "2025-10-01T12:00:00Z"
+    old_label: C
+    new_label: C
+    old_value: 58.0
+    new_value: 60.2
+  # Security Grade
+  - rank_id: security_grade
+    scorecard_id: security-audit
+    timestamp: "2025-09-01T12:00:00Z"
+    old_label: C
+    new_label: B
+    old_value: 68.0
+    new_value: 75.5

@@ -8,15 +8,32 @@ metadata:
     - backend
     - auth
   scores:
-    - score_id: security
-      value: 85
-      reason: Passed security audit 2024-01
+    # Tech Health Scorecard
     - score_id: documentation
-      value: 70
+      scorecard_id: tech-health
+      value: 75
       reason: API docs complete, architecture docs pending
     - score_id: testing
+      scorecard_id: tech-health
       value: 92
       reason: 95% code coverage
+    - score_id: maintainability
+      scorecard_id: tech-health
+      value: 80
+      reason: Good code quality, minor tech debt
+    # Security Audit Scorecard
+    - score_id: vulnerability
+      scorecard_id: security-audit
+      value: 88
+      reason: No critical vulnerabilities, 2 medium issues
+    - score_id: compliance
+      scorecard_id: security-audit
+      value: 95
+      reason: SOC2 compliant
+    - score_id: access_control
+      scorecard_id: security-audit
+      value: 90
+      reason: OAuth2 + RBAC implemented
 spec:
   type: service
   lifecycle: production

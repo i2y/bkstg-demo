@@ -2,85 +2,52 @@ apiVersion: bkstg.io/v1alpha1
 kind: ScorecardDefinition
 metadata:
   name: tech-health
-  title: tech-health
+  title: Tech Health
+  description: Technical health assessment for software components
 status: active
 spec:
   scores:
-  - id: documentation
-    name: Documentation Score
-    description: Quality and completeness of documentation
-    target_kinds:
-    - Component
-    - API
-    min_value: 0.0
-    max_value: 80.0
-    scorecard_id: ''
-  - id: security
-    name: Security Score
-    description: Security audit and vulnerability assessment
-    target_kinds:
-    - Component
-    - API
-    - Resource
-    min_value: 0.0
-    max_value: 100.0
-    scorecard_id: ''
-  - id: testing
-    name: Testing Score
-    description: Test coverage and quality
-    target_kinds:
-    - Component
-    min_value: 0.0
-    max_value: 100.0
-    scorecard_id: ''
-  - id: aaaa
-    name: bbb
-    description: cccc
-    target_kinds: []
-    min_value: 0.0
-    max_value: 100.0
-    scorecard_id: ''
+    - id: documentation
+      name: Documentation Score
+      description: Quality and completeness of documentation
+      target_kinds:
+        - Component
+        - API
+      min_value: 0.0
+      max_value: 100.0
+    - id: testing
+      name: Testing Score
+      description: Test coverage and quality
+      target_kinds:
+        - Component
+      min_value: 0.0
+      max_value: 100.0
+    - id: maintainability
+      name: Maintainability Score
+      description: Code quality and technical debt
+      target_kinds:
+        - Component
+      min_value: 0.0
+      max_value: 100.0
   ranks:
-  - id: production_readiness
-    name: Production Readiness
-    scorecard_id: ''
-    description: Readiness for production deployment (conditional rules demo)
-    target_kinds:
-    - Component
-    score_refs:
-    - security
-    - testing
-    rules:
-    - condition: entity.lifecycle == 'production'
-      formula: security * 0.7 + testing * 0.3
-    - condition: entity.type == 'service'
-      formula: security * 0.5 + testing * 0.5
-    - formula: min(security, testing)
-    entity_refs:
-    - lifecycle
-    - type
-    thresholds:
-    - min: 90.0
-      label: Ready
-    - min: 70.0
-      label: Almost
-    - min: 0.0
-      label: Not Ready
-  - id: tech_health
-    name: Tech Health Rank
-    scorecard_id: ''
-    description: Overall technical health (label function demo)
-    target_kinds:
-    - Component
-    score_refs:
-    - security
-    - documentation
-    - testing
-    label_function: "total = security * 0.4 + documentation * 0.3 + testing * 0.3\n\
-      if total >= 90:\n    return 'S'\nelif total >= 80:\n    return 'A'\nelif entity.lifecycle\
-      \ == 'production':\n    return 'B'\nelif 'critical' in entity.tags:\n    return\
-      \ 'C'\nelse:\n    return 'D'\n"
-    entity_refs:
-    - lifecycle
-    - tags
-    thresholds: []
+    - id: tech_health
+      name: Tech Health Rank
+      description: Overall technical health grade
+      target_kinds:
+        - Component
+      score_refs:
+        - documentation
+        - testing
+        - maintainability
+      formula: (documentation * 0.3 + testing * 0.4 + maintainability * 0.3)
+      thresholds:
+        - min: 90.0
+          label: S
+        - min: 80.0
+          label: A
+        - min: 70.0
+          label: B
+        - min: 60.0
+          label: C
+        - min: 0.0
+          label: D

@@ -1,0 +1,57 @@
+apiVersion: bkstg.io/v1alpha1
+kind: ScorecardDefinition
+metadata:
+  name: security-audit
+  title: Security Audit
+  description: Security assessment and compliance scorecard
+status: active
+spec:
+  scores:
+    - id: vulnerability
+      name: Vulnerability Score
+      description: Security vulnerability assessment (higher is better)
+      target_kinds:
+        - Component
+        - API
+        - Resource
+      min_value: 0.0
+      max_value: 100.0
+    - id: compliance
+      name: Compliance Score
+      description: Regulatory and policy compliance
+      target_kinds:
+        - Component
+        - API
+      min_value: 0.0
+      max_value: 100.0
+    - id: access_control
+      name: Access Control Score
+      description: Authentication and authorization implementation
+      target_kinds:
+        - Component
+        - API
+      min_value: 0.0
+      max_value: 100.0
+  ranks:
+    - id: security_grade
+      name: Security Grade
+      description: Overall security posture grade
+      target_kinds:
+        - Component
+        - API
+      score_refs:
+        - vulnerability
+        - compliance
+        - access_control
+      formula: (vulnerability * 0.5 + compliance * 0.3 + access_control * 0.2)
+      thresholds:
+        - min: 95.0
+          label: S
+        - min: 85.0
+          label: A
+        - min: 75.0
+          label: B
+        - min: 60.0
+          label: C
+        - min: 0.0
+          label: D

@@ -9,15 +9,32 @@ metadata:
     - security
     - oauth
   scores:
-    - score_id: security
-      value: 98
-      reason: Comprehensive security audit passed
+    # Tech Health Scorecard
     - score_id: documentation
+      scorecard_id: tech-health
       value: 92
       reason: Full API and integration docs
     - score_id: testing
+      scorecard_id: tech-health
       value: 95
       reason: Excellent test coverage
+    - score_id: maintainability
+      scorecard_id: tech-health
+      value: 90
+      reason: Clean architecture, minimal tech debt
+    # Security Audit Scorecard
+    - score_id: vulnerability
+      scorecard_id: security-audit
+      value: 98
+      reason: Comprehensive security audit passed
+    - score_id: compliance
+      scorecard_id: security-audit
+      value: 100
+      reason: All compliance standards met
+    - score_id: access_control
+      scorecard_id: security-audit
+      value: 100
+      reason: State-of-the-art auth implementation
 spec:
   type: service
   lifecycle: production

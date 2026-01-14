@@ -9,15 +9,32 @@ metadata:
     - analytics
     - visualization
   scores:
-    - score_id: security
-      value: 80
-      reason: Role-based access control
+    # Tech Health Scorecard
     - score_id: documentation
+      scorecard_id: tech-health
       value: 65
       reason: User guide available
     - score_id: testing
+      scorecard_id: tech-health
       value: 55
       reason: Manual testing only
+    - score_id: maintainability
+      scorecard_id: tech-health
+      value: 60
+      reason: Needs modernization
+    # Security Audit Scorecard
+    - score_id: vulnerability
+      scorecard_id: security-audit
+      value: 80
+      reason: No known vulnerabilities
+    - score_id: compliance
+      scorecard_id: security-audit
+      value: 75
+      reason: Basic data protection
+    - score_id: access_control
+      scorecard_id: security-audit
+      value: 82
+      reason: Role-based access control
 spec:
   type: website
   lifecycle: experimental

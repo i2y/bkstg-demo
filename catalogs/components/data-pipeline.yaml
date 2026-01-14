@@ -9,15 +9,32 @@ metadata:
     - etl
     - spark
   scores:
-    - score_id: security
-      value: 85
-      reason: Data encryption at rest
+    # Tech Health Scorecard
     - score_id: documentation
+      scorecard_id: tech-health
       value: 68
       reason: Pipeline docs need update
     - score_id: testing
+      scorecard_id: tech-health
       value: 72
       reason: Integration tests available
+    - score_id: maintainability
+      scorecard_id: tech-health
+      value: 65
+      reason: Complex Spark jobs
+    # Security Audit Scorecard
+    - score_id: vulnerability
+      scorecard_id: security-audit
+      value: 85
+      reason: Data encryption at rest
+    - score_id: compliance
+      scorecard_id: security-audit
+      value: 90
+      reason: GDPR data handling compliant
+    - score_id: access_control
+      scorecard_id: security-audit
+      value: 88
+      reason: IAM roles properly configured
 spec:
   type: service
   lifecycle: production

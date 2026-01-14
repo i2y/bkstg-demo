@@ -8,15 +8,32 @@ metadata:
     - frontend
     - react
   scores:
-    - score_id: security
-      value: 82
-      reason: CSP headers configured
+    # Tech Health Scorecard
     - score_id: documentation
+      scorecard_id: tech-health
       value: 75
       reason: Component docs available
     - score_id: testing
+      scorecard_id: tech-health
       value: 85
       reason: Good unit test coverage
+    - score_id: maintainability
+      scorecard_id: tech-health
+      value: 78
+      reason: Modern React with TypeScript
+    # Security Audit Scorecard
+    - score_id: vulnerability
+      scorecard_id: security-audit
+      value: 82
+      reason: CSP headers configured
+    - score_id: compliance
+      scorecard_id: security-audit
+      value: 85
+      reason: WCAG 2.1 AA compliant
+    - score_id: access_control
+      scorecard_id: security-audit
+      value: 80
+      reason: JWT-based auth implemented
 spec:
   type: website
   lifecycle: production

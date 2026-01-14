@@ -1,0 +1,9 @@
+definition_id: security-audit
+definition_type: scorecard
+entries:
+  - timestamp: "2025-07-01T09:00:00Z"
+    change_type: created
+    description: "Initial security audit scorecard with vulnerability, compliance, access_control"
+  - timestamp: "2025-09-01T14:00:00Z"
+    change_type: modified
+    description: "Adjusted security_grade thresholds for stricter grading"

@@ -8,15 +8,32 @@ metadata:
     - backend
     - orders
   scores:
-    - score_id: security
-      value: 72
-      reason: Pending security review
+    # Tech Health Scorecard
     - score_id: documentation
+      scorecard_id: tech-health
       value: 55
       reason: Documentation needs update
     - score_id: testing
+      scorecard_id: tech-health
       value: 65
       reason: Unit tests at 68% coverage
+    - score_id: maintainability
+      scorecard_id: tech-health
+      value: 58
+      reason: Legacy code needs refactoring
+    # Security Audit Scorecard
+    - score_id: vulnerability
+      scorecard_id: security-audit
+      value: 72
+      reason: Pending security review
+    - score_id: compliance
+      scorecard_id: security-audit
+      value: 80
+      reason: Basic compliance met
+    - score_id: access_control
+      scorecard_id: security-audit
+      value: 75
+      reason: API key auth, needs upgrade to OAuth
 spec:
   type: service
   lifecycle: production

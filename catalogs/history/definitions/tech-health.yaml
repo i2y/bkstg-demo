@@ -1,0 +1,12 @@
+definition_id: tech-health
+definition_type: scorecard
+entries:
+  - timestamp: "2025-06-01T09:00:00Z"
+    change_type: created
+    description: "Initial scorecard creation with documentation, testing scores"
+  - timestamp: "2025-08-15T14:00:00Z"
+    change_type: modified
+    description: "Added maintainability score and adjusted weights"
+  - timestamp: "2025-10-01T10:00:00Z"
+    change_type: modified
+    description: "Updated threshold values for tech_health rank"
