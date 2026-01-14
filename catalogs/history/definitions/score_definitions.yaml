@@ -54,3 +54,17 @@ scores:
         min_value: 0.0
         max_value: 100.0
       changed_fields: []
+  aaafaa:
+    entries:
+    - timestamp: '2026-01-14T12:11:57.405187Z'
+      change_type: created
+      new_value:
+        id: aaafaa
+        name: afafaaf
+        description: afaa
+        target_kinds:
+        - Component
+        - API
+        min_value: 0.0
+        max_value: 100.0
+      changed_fields: []
