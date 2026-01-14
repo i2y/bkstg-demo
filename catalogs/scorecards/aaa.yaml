@@ -6,5 +6,14 @@ metadata:
   description: bbb
 status: active
 spec:
-  scores: []
+  scores:
+  - id: aaafaa
+    name: afafaaf
+    description: afaa
+    target_kinds:
+    - Component
+    - API
+    min_value: 0.0
+    max_value: 100.0
+    scorecard_id: ''
   ranks: []
