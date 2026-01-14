@@ -1,53 +1,55 @@
 entity_id: Component:default/api-gateway
-entries:
-  # Tech Health Rank history
-  - rank_id: tech_health
-    scorecard_id: tech-health
-    timestamp: "2025-05-15T12:00:00Z"
-    old_label: C
-    new_label: C
-    old_value: 60.0
-    new_value: 65.0
-  - rank_id: tech_health
-    scorecard_id: tech-health
-    timestamp: "2025-07-01T12:00:00Z"
-    old_label: C
-    new_label: B
-    old_value: 65.0
-    new_value: 72.0
-  - rank_id: tech_health
-    scorecard_id: tech-health
-    timestamp: "2025-09-01T12:00:00Z"
-    old_label: B
-    new_label: B
-    old_value: 72.0
-    new_value: 78.0
-  - rank_id: tech_health
-    scorecard_id: tech-health
-    timestamp: "2025-11-15T12:00:00Z"
-    old_label: B
-    new_label: A
-    old_value: 78.0
-    new_value: 83.2
-  # Security Grade history
-  - rank_id: security_grade
-    scorecard_id: security-audit
-    timestamp: "2025-04-15T12:00:00Z"
-    old_label: B
-    new_label: A
-    old_value: 78.0
-    new_value: 85.0
-  - rank_id: security_grade
-    scorecard_id: security-audit
-    timestamp: "2025-06-15T12:00:00Z"
-    old_label: A
-    new_label: A
-    old_value: 85.0
-    new_value: 88.5
-  - rank_id: security_grade
-    scorecard_id: security-audit
-    timestamp: "2025-09-01T12:00:00Z"
-    old_label: A
-    new_label: S
-    old_value: 88.5
-    new_value: 95.1
+ranks:
+  tech_health:
+    entries:
+      - timestamp: "2025-10-22T12:00:00Z"
+        value: 66.7
+        label: C
+        score_snapshot:
+          documentation: 65
+          testing: 60
+          maintainability: 75
+      - timestamp: "2025-11-15T12:00:00Z"
+        value: 75.0
+        label: B
+        score_snapshot:
+          documentation: 75
+          testing: 70
+          maintainability: 80
+      - timestamp: "2025-12-15T12:00:00Z"
+        value: 81.7
+        label: A
+        score_snapshot:
+          documentation: 82
+          testing: 78
+          maintainability: 85
+      - timestamp: "2026-01-08T12:00:00Z"
+        value: 83.7
+        label: A
+        score_snapshot:
+          documentation: 88
+          testing: 78
+          maintainability: 85
+  security_grade:
+    entries:
+      - timestamp: "2025-10-25T12:00:00Z"
+        value: 84.4
+        label: A
+        score_snapshot:
+          vulnerability: 82
+          compliance: 82
+          access_control: 88
+      - timestamp: "2025-11-25T12:00:00Z"
+        value: 89.4
+        label: A
+        score_snapshot:
+          vulnerability: 88
+          compliance: 88
+          access_control: 94
+      - timestamp: "2025-12-25T12:00:00Z"
+        value: 94.6
+        label: S
+        score_snapshot:
+          vulnerability: 95
+          compliance: 92
+          access_control: 98

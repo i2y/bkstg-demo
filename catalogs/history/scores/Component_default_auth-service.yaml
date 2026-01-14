@@ -1,99 +1,66 @@
 entity_id: Component:default/auth-service
-entries:
-  # Tech Health - documentation history
-  - score_id: documentation
-    scorecard_id: tech-health
-    timestamp: "2025-04-15T10:00:00Z"
-    old_value: 75
-    new_value: 82
-    old_reason: "Good docs"
-    new_reason: "Added examples"
-  - score_id: documentation
-    scorecard_id: tech-health
-    timestamp: "2025-07-01T10:00:00Z"
-    old_value: 82
-    new_value: 88
-    old_reason: "Added examples"
-    new_reason: "Integration guide"
-  - score_id: documentation
-    scorecard_id: tech-health
-    timestamp: "2025-10-01T10:00:00Z"
-    old_value: 88
-    new_value: 92
-    old_reason: "Integration guide"
-    new_reason: "Full API and integration docs"
-  # Tech Health - testing history
-  - score_id: testing
-    scorecard_id: tech-health
-    timestamp: "2025-05-01T09:00:00Z"
-    old_value: 85
-    new_value: 90
-    old_reason: "High coverage"
-    new_reason: "Added security tests"
-  - score_id: testing
-    scorecard_id: tech-health
-    timestamp: "2025-08-15T09:00:00Z"
-    old_value: 90
-    new_value: 95
-    old_reason: "Added security tests"
-    new_reason: "Excellent test coverage"
-  # Tech Health - maintainability history
-  - score_id: maintainability
-    scorecard_id: tech-health
-    timestamp: "2025-04-01T11:00:00Z"
-    old_value: 82
-    new_value: 86
-    old_reason: "Clean code"
-    new_reason: "Improved patterns"
-  - score_id: maintainability
-    scorecard_id: tech-health
-    timestamp: "2025-08-01T11:00:00Z"
-    old_value: 86
-    new_value: 90
-    old_reason: "Improved patterns"
-    new_reason: "Clean architecture, minimal tech debt"
-  # Security Audit - vulnerability history
-  - score_id: vulnerability
-    scorecard_id: security-audit
-    timestamp: "2025-04-01T11:00:00Z"
-    old_value: 92
-    new_value: 95
-    old_reason: "Excellent security"
-    new_reason: "Audit passed"
-  - score_id: vulnerability
-    scorecard_id: security-audit
-    timestamp: "2025-09-01T11:00:00Z"
-    old_value: 95
-    new_value: 98
-    old_reason: "Audit passed"
-    new_reason: "Comprehensive security audit passed"
-  # Security Audit - compliance history
-  - score_id: compliance
-    scorecard_id: security-audit
-    timestamp: "2025-05-01T15:00:00Z"
-    old_value: 95
-    new_value: 98
-    old_reason: "Highly compliant"
-    new_reason: "All standards met"
-  - score_id: compliance
-    scorecard_id: security-audit
-    timestamp: "2025-08-01T15:00:00Z"
-    old_value: 98
-    new_value: 100
-    old_reason: "All standards met"
-    new_reason: "All compliance standards met"
-  # Security Audit - access_control history
-  - score_id: access_control
-    scorecard_id: security-audit
-    timestamp: "2025-04-15T13:00:00Z"
-    old_value: 95
-    new_value: 98
-    old_reason: "Best practices"
-    new_reason: "Zero-trust model"
-  - score_id: access_control
-    scorecard_id: security-audit
-    timestamp: "2025-07-01T13:00:00Z"
-    old_value: 98
-    new_value: 100
-    old_reason: "Zero-trust model"
-    new_reason: "State-of-the-art auth implementation"
+scores:
+  documentation:
+    entries:
+      - timestamp: "2025-10-18T10:00:00Z"
+        value: 82
+        reason: "Added examples"
+        source: "manual"
+      - timestamp: "2025-11-18T10:00:00Z"
+        value: 88
+        reason: "Integration guide"
+        source: "manual"
+      - timestamp: "2025-12-18T10:00:00Z"
+        value: 92
+        reason: "Full API and integration docs"
+        source: "manual"
+  testing:
+    entries:
+      - timestamp: "2025-10-20T09:00:00Z"
+        value: 90
+        reason: "Added security tests"
+        source: "manual"
+      - timestamp: "2025-11-20T09:00:00Z"
+        value: 95
+        reason: "Excellent test coverage"
+        source: "manual"
+  maintainability:
+    entries:
+      - timestamp: "2025-10-22T11:00:00Z"
+        value: 86
+        reason: "Improved patterns"
+        source: "manual"
+      - timestamp: "2025-11-22T11:00:00Z"
+        value: 90
+        reason: "Clean architecture, minimal tech debt"
+        source: "manual"
+  vulnerability:
+    entries:
+      - timestamp: "2025-10-25T11:00:00Z"
+        value: 95
+        reason: "Audit passed"
+        source: "manual"
+      - timestamp: "2025-12-25T11:00:00Z"
+        value: 98
+        reason: "Comprehensive security audit passed"
+        source: "manual"
+  compliance:
+    entries:
+      - timestamp: "2025-10-28T15:00:00Z"
+        value: 98
+        reason: "All standards met"
+        source: "manual"
+      - timestamp: "2025-12-28T15:00:00Z"
+        value: 100
+        reason: "All compliance standards met"
+        source: "manual"
+  access_control:
+    entries:
+      - timestamp: "2025-10-30T13:00:00Z"
+        value: 98
+        reason: "Zero-trust model"
+        source: "manual"
+      - timestamp: "2025-12-30T13:00:00Z"
+        value: 100
+        reason: "State-of-the-art auth implementation"
+        source: "manual"

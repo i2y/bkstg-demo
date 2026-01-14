@@ -1,32 +1,41 @@
 entity_id: Component:default/auth-service
-entries:
-  # Tech Health Rank history
-  - rank_id: tech_health
-    scorecard_id: tech-health
-    timestamp: "2025-05-01T12:00:00Z"
-    old_label: A
-    new_label: A
-    old_value: 82.0
-    new_value: 86.0
-  - rank_id: tech_health
-    scorecard_id: tech-health
-    timestamp: "2025-08-15T12:00:00Z"
-    old_label: A
-    new_label: S
-    old_value: 86.0
-    new_value: 92.2
-  # Security Grade history
-  - rank_id: security_grade
-    scorecard_id: security-audit
-    timestamp: "2025-04-15T12:00:00Z"
-    old_label: A
-    new_label: S
-    old_value: 94.0
-    new_value: 97.0
-  - rank_id: security_grade
-    scorecard_id: security-audit
-    timestamp: "2025-08-01T12:00:00Z"
-    old_label: S
-    new_label: S
-    old_value: 97.0
-    new_value: 99.3
+ranks:
+  tech_health:
+    entries:
+      - timestamp: "2025-10-22T12:00:00Z"
+        value: 86.0
+        label: A
+        score_snapshot:
+          documentation: 82
+          testing: 90
+          maintainability: 86
+      - timestamp: "2025-11-22T12:00:00Z"
+        value: 91.0
+        label: S
+        score_snapshot:
+          documentation: 88
+          testing: 95
+          maintainability: 90
+      - timestamp: "2025-12-22T12:00:00Z"
+        value: 92.3
+        label: S
+        score_snapshot:
+          documentation: 92
+          testing: 95
+          maintainability: 90
+  security_grade:
+    entries:
+      - timestamp: "2025-10-28T12:00:00Z"
+        value: 97.0
+        label: S
+        score_snapshot:
+          vulnerability: 95
+          compliance: 98
+          access_control: 98
+      - timestamp: "2025-12-28T12:00:00Z"
+        value: 99.4
+        label: S
+        score_snapshot:
+          vulnerability: 98
+          compliance: 100
+          access_control: 100
