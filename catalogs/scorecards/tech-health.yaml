@@ -3,8 +3,7 @@ kind: ScorecardDefinition
 metadata:
   name: tech-health
   title: tech-health
-status: !!python/object/apply:bkstg.models.scorecard.ScorecardStatus
-- active
+status: active
 spec:
   scores:
   - id: documentation
