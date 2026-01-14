@@ -1,0 +1,87 @@
+apiVersion: bkstg.io/v1alpha1
+kind: ScorecardDefinition
+metadata:
+  name: maturity-assessment
+  title: Maturity Assessment
+  description: Service maturity level assessment using discrete levels
+status: active
+spec:
+  scores:
+    # Five-level (S/A/B/C/D) score example
+    - id: operational_maturity
+      name: Operational Maturity
+      description: How well the service is operated in production (monitoring, alerting, runbooks)
+      target_kinds:
+        - Component
+      levels:
+        - label: S
+          value: 100
+        - label: A
+          value: 80
+        - label: B
+          value: 60
+        - label: C
+          value: 40
+        - label: D
+          value: 20
+    # Three-level (High/Medium/Low) score example
+    - id: automation_level
+      name: Automation Level
+      description: CI/CD and infrastructure automation coverage
+      target_kinds:
+        - Component
+      levels:
+        - label: High
+          value: 100
+        - label: Mid
+          value: 50
+        - label: Low
+          value: 0
+    # Five-level numeric (5/4/3/2/1) score example
+    - id: observability
+      name: Observability
+      description: Logging, metrics, and tracing implementation completeness
+      target_kinds:
+        - Component
+        - API
+      levels:
+        - label: "5"
+          value: 100
+        - label: "4"
+          value: 80
+        - label: "3"
+          value: 60
+        - label: "2"
+          value: 40
+        - label: "1"
+          value: 20
+    # Standard numeric input (no levels) for comparison
+    - id: sla_uptime
+      name: SLA Uptime
+      description: Target SLA uptime percentage (e.g., 99.9)
+      target_kinds:
+        - Component
+      min_value: 90.0
+      max_value: 100.0
+  ranks:
+    - id: maturity_grade
+      name: Maturity Grade
+      description: Overall service maturity grade
+      target_kinds:
+        - Component
+      score_refs:
+        - operational_maturity
+        - automation_level
+        - observability
+      formula: (operational_maturity * 0.4 + automation_level * 0.3 + observability * 0.3)
+      thresholds:
+        - min: 90.0
+          label: S
+        - min: 75.0
+          label: A
+        - min: 55.0
+          label: B
+        - min: 35.0
+          label: C
+        - min: 0.0
+          label: D
