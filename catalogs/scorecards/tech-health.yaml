@@ -2,7 +2,9 @@ apiVersion: bkstg.io/v1alpha1
 kind: ScorecardDefinition
 metadata:
   name: tech-health
-  title: Tech Health Scorecard
+  title: tech-health
+status: !!python/object/apply:bkstg.models.scorecard.ScorecardStatus
+- active
 spec:
   scores:
   - id: documentation
@@ -13,6 +15,7 @@ spec:
     - API
     min_value: 0.0
     max_value: 80.0
+    scorecard_id: ''
   - id: security
     name: Security Score
     description: Security audit and vulnerability assessment
@@ -22,6 +25,7 @@ spec:
     - Resource
     min_value: 0.0
     max_value: 100.0
+    scorecard_id: ''
   - id: testing
     name: Testing Score
     description: Test coverage and quality
@@ -29,24 +33,33 @@ spec:
     - Component
     min_value: 0.0
     max_value: 100.0
+    scorecard_id: ''
+  - id: aaaa
+    name: bbb
+    description: cccc
+    target_kinds: []
+    min_value: 0.0
+    max_value: 100.0
+    scorecard_id: ''
   ranks:
   - id: production_readiness
     name: Production Readiness
+    scorecard_id: ''
     description: Readiness for production deployment (conditional rules demo)
     target_kinds:
     - Component
     score_refs:
     - security
     - testing
+    rules:
+    - condition: entity.lifecycle == 'production'
+      formula: security * 0.7 + testing * 0.3
+    - condition: entity.type == 'service'
+      formula: security * 0.5 + testing * 0.5
+    - formula: min(security, testing)
     entity_refs:
     - lifecycle
     - type
-    rules:
-    - condition: "entity.lifecycle == 'production'"
-      formula: "security * 0.7 + testing * 0.3"
-    - condition: "entity.type == 'service'"
-      formula: "security * 0.5 + testing * 0.5"
-    - formula: "min(security, testing)"
     thresholds:
     - min: 90.0
       label: Ready
@@ -56,6 +69,7 @@ spec:
       label: Not Ready
   - id: tech_health
     name: Tech Health Rank
+    scorecard_id: ''
     description: Overall technical health (label function demo)
     target_kinds:
     - Component
@@ -63,18 +77,11 @@ spec:
     - security
     - documentation
     - testing
+    label_function: "total = security * 0.4 + documentation * 0.3 + testing * 0.3\n\
+      if total >= 90:\n    return 'S'\nelif total >= 80:\n    return 'A'\nelif entity.lifecycle\
+      \ == 'production':\n    return 'B'\nelif 'critical' in entity.tags:\n    return\
+      \ 'C'\nelse:\n    return 'D'\n"
     entity_refs:
     - lifecycle
     - tags
-    label_function: |
-      total = security * 0.4 + documentation * 0.3 + testing * 0.3
-      if total >= 90:
-          return 'S'
-      elif total >= 80:
-          return 'A'
-      elif entity.lifecycle == 'production':
-          return 'B'
-      elif 'critical' in entity.tags:
-          return 'C'
-      else:
-          return 'D'
+    thresholds: []
