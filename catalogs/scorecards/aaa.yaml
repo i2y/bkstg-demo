@@ -1,0 +1,10 @@
+apiVersion: bkstg.io/v1alpha1
+kind: ScorecardDefinition
+metadata:
+  name: aaa
+  title: aaa
+  description: bbb
+status: active
+spec:
+  scores: []
+  ranks: []
