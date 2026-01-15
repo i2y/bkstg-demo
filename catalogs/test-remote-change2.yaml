@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-remote-change2
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:default/guest
