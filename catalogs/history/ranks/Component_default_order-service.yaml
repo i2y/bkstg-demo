@@ -1,55 +1,55 @@
 entity_id: Component:default/order-service
 ranks:
-  tech_health:
+  tech-health:tech_health:
     entries:
-      - timestamp: "2025-10-25T12:00:00Z"
-        value: 45.3
-        label: D
-        score_snapshot:
-          documentation: 38
-          testing: 50
-          maintainability: 48
-      - timestamp: "2025-11-20T12:00:00Z"
-        value: 52.7
-        label: D
-        score_snapshot:
-          documentation: 45
-          testing: 58
-          maintainability: 55
-      - timestamp: "2025-12-20T12:00:00Z"
-        value: 57.7
-        label: C
-        score_snapshot:
-          documentation: 50
-          testing: 65
-          maintainability: 58
-      - timestamp: "2026-01-05T12:00:00Z"
-        value: 59.3
-        label: C
-        score_snapshot:
-          documentation: 55
-          testing: 65
-          maintainability: 58
-  security_grade:
+    - timestamp: '2025-10-25T12:00:00Z'
+      value: 45.3
+      label: D
+      score_snapshot:
+        documentation: 38
+        testing: 50
+        maintainability: 48
+    - timestamp: '2025-11-20T12:00:00Z'
+      value: 52.7
+      label: D
+      score_snapshot:
+        documentation: 45
+        testing: 58
+        maintainability: 55
+    - timestamp: '2025-12-20T12:00:00Z'
+      value: 57.7
+      label: C
+      score_snapshot:
+        documentation: 50
+        testing: 65
+        maintainability: 58
+    - timestamp: '2026-01-05T12:00:00Z'
+      value: 59.3
+      label: C
+      score_snapshot:
+        documentation: 55
+        testing: 65
+        maintainability: 58
+  security-audit:security_grade:
     entries:
-      - timestamp: "2025-10-28T12:00:00Z"
-        value: 61.8
-        label: C
-        score_snapshot:
-          vulnerability: 58
-          compliance: 65
-          access_control: 62
-      - timestamp: "2025-11-28T12:00:00Z"
-        value: 70.0
-        label: B
-        score_snapshot:
-          vulnerability: 65
-          compliance: 75
-          access_control: 70
-      - timestamp: "2025-12-28T12:00:00Z"
-        value: 75.6
-        label: B
-        score_snapshot:
-          vulnerability: 72
-          compliance: 80
-          access_control: 75
+    - timestamp: '2025-10-28T12:00:00Z'
+      value: 61.8
+      label: C
+      score_snapshot:
+        vulnerability: 58
+        compliance: 65
+        access_control: 62
+    - timestamp: '2025-11-28T12:00:00Z'
+      value: 70.0
+      label: B
+      score_snapshot:
+        vulnerability: 65
+        compliance: 75
+        access_control: 70
+    - timestamp: '2025-12-28T12:00:00Z'
+      value: 75.6
+      label: B
+      score_snapshot:
+        vulnerability: 72
+        compliance: 80
+        access_control: 75

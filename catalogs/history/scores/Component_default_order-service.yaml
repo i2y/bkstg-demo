@@ -1,90 +1,90 @@
 entity_id: Component:default/order-service
 scores:
-  documentation:
+  tech-health:documentation:
     entries:
-      - timestamp: "2025-10-20T10:00:00Z"
-        value: 38
-        reason: "Basic README"
-        source: "manual"
-      - timestamp: "2025-11-15T10:00:00Z"
-        value: 45
-        reason: "README updated"
-        source: "manual"
-      - timestamp: "2025-12-15T10:00:00Z"
-        value: 50
-        reason: "API overview added"
-        source: "manual"
-      - timestamp: "2026-01-05T14:30:00Z"
-        value: 55
-        reason: "Documentation needs update"
-        source: "manual"
-  testing:
+    - timestamp: '2025-10-20T10:00:00Z'
+      value: 38
+      reason: Basic README
+      source: manual
+    - timestamp: '2025-11-15T10:00:00Z'
+      value: 45
+      reason: README updated
+      source: manual
+    - timestamp: '2025-12-15T10:00:00Z'
+      value: 50
+      reason: API overview added
+      source: manual
+    - timestamp: '2026-01-05T14:30:00Z'
+      value: 55
+      reason: Documentation needs update
+      source: manual
+  tech-health:testing:
     entries:
-      - timestamp: "2025-10-25T09:00:00Z"
-        value: 50
-        reason: "Added unit tests"
-        source: "manual"
-      - timestamp: "2025-11-20T09:00:00Z"
-        value: 58
-        reason: "60% coverage"
-        source: "manual"
-      - timestamp: "2025-12-20T09:00:00Z"
-        value: 65
-        reason: "Unit tests at 68% coverage"
-        source: "manual"
-  maintainability:
+    - timestamp: '2025-10-25T09:00:00Z'
+      value: 50
+      reason: Added unit tests
+      source: manual
+    - timestamp: '2025-11-20T09:00:00Z'
+      value: 58
+      reason: 60% coverage
+      source: manual
+    - timestamp: '2025-12-20T09:00:00Z'
+      value: 65
+      reason: Unit tests at 68% coverage
+      source: manual
+  tech-health:maintainability:
     entries:
-      - timestamp: "2025-10-28T11:00:00Z"
-        value: 48
-        reason: "Some cleanup"
-        source: "manual"
-      - timestamp: "2025-11-28T11:00:00Z"
-        value: 55
-        reason: "Partial refactor"
-        source: "manual"
-      - timestamp: "2025-12-28T11:00:00Z"
-        value: 58
-        reason: "Legacy code needs refactoring"
-        source: "manual"
-  vulnerability:
+    - timestamp: '2025-10-28T11:00:00Z'
+      value: 48
+      reason: Some cleanup
+      source: manual
+    - timestamp: '2025-11-28T11:00:00Z'
+      value: 55
+      reason: Partial refactor
+      source: manual
+    - timestamp: '2025-12-28T11:00:00Z'
+      value: 58
+      reason: Legacy code needs refactoring
+      source: manual
+  security-audit:vulnerability:
     entries:
-      - timestamp: "2025-10-22T11:00:00Z"
-        value: 58
-        reason: "Critical fixed"
-        source: "manual"
-      - timestamp: "2025-11-22T11:00:00Z"
-        value: 65
-        reason: "High severity fixed"
-        source: "manual"
-      - timestamp: "2025-12-22T11:00:00Z"
-        value: 72
-        reason: "Pending security review"
-        source: "manual"
-  compliance:
+    - timestamp: '2025-10-22T11:00:00Z'
+      value: 58
+      reason: Critical fixed
+      source: manual
+    - timestamp: '2025-11-22T11:00:00Z'
+      value: 65
+      reason: High severity fixed
+      source: manual
+    - timestamp: '2025-12-22T11:00:00Z'
+      value: 72
+      reason: Pending security review
+      source: manual
+  security-audit:compliance:
     entries:
-      - timestamp: "2025-10-30T15:00:00Z"
-        value: 65
-        reason: "Working on compliance"
-        source: "manual"
-      - timestamp: "2025-11-30T15:00:00Z"
-        value: 75
-        reason: "Partial compliance"
-        source: "manual"
-      - timestamp: "2025-12-30T15:00:00Z"
-        value: 80
-        reason: "Basic compliance met"
-        source: "manual"
-  access_control:
+    - timestamp: '2025-10-30T15:00:00Z'
+      value: 65
+      reason: Working on compliance
+      source: manual
+    - timestamp: '2025-11-30T15:00:00Z'
+      value: 75
+      reason: Partial compliance
+      source: manual
+    - timestamp: '2025-12-30T15:00:00Z'
+      value: 80
+      reason: Basic compliance met
+      source: manual
+  security-audit:access_control:
     entries:
-      - timestamp: "2025-10-25T13:00:00Z"
-        value: 62
-        reason: "Token validation"
-        source: "manual"
-      - timestamp: "2025-11-25T13:00:00Z"
-        value: 70
-        reason: "JWT implemented"
-        source: "manual"
-      - timestamp: "2025-12-25T13:00:00Z"
-        value: 75
-        reason: "API key auth, needs upgrade to OAuth"
-        source: "manual"
+    - timestamp: '2025-10-25T13:00:00Z'
+      value: 62
+      reason: Token validation
+      source: manual
+    - timestamp: '2025-11-25T13:00:00Z'
+      value: 70
+      reason: JWT implemented
+      source: manual
+    - timestamp: '2025-12-25T13:00:00Z'
+      value: 75
+      reason: API key auth, needs upgrade to OAuth
+      source: manual

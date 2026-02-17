@@ -1,90 +1,90 @@
 entity_id: Component:default/api-gateway
 scores:
-  documentation:
+  tech-health:documentation:
     entries:
-      - timestamp: "2025-10-18T10:00:00Z"
-        value: 65
-        reason: "OpenAPI spec added"
-        source: "manual"
-      - timestamp: "2025-11-10T10:00:00Z"
-        value: 75
-        reason: "Integration guide added"
-        source: "manual"
-      - timestamp: "2025-12-10T10:00:00Z"
-        value: 82
-        reason: "Troubleshooting docs"
-        source: "manual"
-      - timestamp: "2026-01-08T14:30:00Z"
-        value: 88
-        reason: "Comprehensive API docs available"
-        source: "manual"
-  testing:
+    - timestamp: '2025-10-18T10:00:00Z'
+      value: 65
+      reason: OpenAPI spec added
+      source: manual
+    - timestamp: '2025-11-10T10:00:00Z'
+      value: 75
+      reason: Integration guide added
+      source: manual
+    - timestamp: '2025-12-10T10:00:00Z'
+      value: 82
+      reason: Troubleshooting docs
+      source: manual
+    - timestamp: '2026-01-08T14:30:00Z'
+      value: 88
+      reason: Comprehensive API docs available
+      source: manual
+  tech-health:testing:
     entries:
-      - timestamp: "2025-10-22T09:00:00Z"
-        value: 60
-        reason: "Added smoke tests"
-        source: "manual"
-      - timestamp: "2025-11-18T09:00:00Z"
-        value: 70
-        reason: "E2E tests added"
-        source: "manual"
-      - timestamp: "2025-12-18T09:00:00Z"
-        value: 78
-        reason: "Integration tests need improvement"
-        source: "manual"
-  maintainability:
+    - timestamp: '2025-10-22T09:00:00Z'
+      value: 60
+      reason: Added smoke tests
+      source: manual
+    - timestamp: '2025-11-18T09:00:00Z'
+      value: 70
+      reason: E2E tests added
+      source: manual
+    - timestamp: '2025-12-18T09:00:00Z'
+      value: 78
+      reason: Integration tests need improvement
+      source: manual
+  tech-health:maintainability:
     entries:
-      - timestamp: "2025-10-25T11:00:00Z"
-        value: 75
-        reason: "Started modularization"
-        source: "manual"
-      - timestamp: "2025-11-25T11:00:00Z"
-        value: 80
-        reason: "Plugin architecture"
-        source: "manual"
-      - timestamp: "2025-12-25T11:00:00Z"
-        value: 85
-        reason: "Well-structured codebase"
-        source: "manual"
-  vulnerability:
+    - timestamp: '2025-10-25T11:00:00Z'
+      value: 75
+      reason: Started modularization
+      source: manual
+    - timestamp: '2025-11-25T11:00:00Z'
+      value: 80
+      reason: Plugin architecture
+      source: manual
+    - timestamp: '2025-12-25T11:00:00Z'
+      value: 85
+      reason: Well-structured codebase
+      source: manual
+  security-audit:vulnerability:
     entries:
-      - timestamp: "2025-10-20T11:00:00Z"
-        value: 82
-        reason: "CVEs patched"
-        source: "manual"
-      - timestamp: "2025-11-20T11:00:00Z"
-        value: 88
-        reason: "Security hardening"
-        source: "manual"
-      - timestamp: "2025-12-20T11:00:00Z"
-        value: 95
-        reason: "All security checks passed"
-        source: "manual"
-  compliance:
+    - timestamp: '2025-10-20T11:00:00Z'
+      value: 82
+      reason: CVEs patched
+      source: manual
+    - timestamp: '2025-11-20T11:00:00Z'
+      value: 88
+      reason: Security hardening
+      source: manual
+    - timestamp: '2025-12-20T11:00:00Z'
+      value: 95
+      reason: All security checks passed
+      source: manual
+  security-audit:compliance:
     entries:
-      - timestamp: "2025-10-28T15:00:00Z"
-        value: 82
-        reason: "PCI-DSS progress"
-        source: "manual"
-      - timestamp: "2025-11-28T15:00:00Z"
-        value: 88
-        reason: "PCI-DSS Level 2"
-        source: "manual"
-      - timestamp: "2025-12-28T15:00:00Z"
-        value: 92
-        reason: "PCI-DSS compliant"
-        source: "manual"
-  access_control:
+    - timestamp: '2025-10-28T15:00:00Z'
+      value: 82
+      reason: PCI-DSS progress
+      source: manual
+    - timestamp: '2025-11-28T15:00:00Z'
+      value: 88
+      reason: PCI-DSS Level 2
+      source: manual
+    - timestamp: '2025-12-28T15:00:00Z'
+      value: 92
+      reason: PCI-DSS compliant
+      source: manual
+  security-audit:access_control:
     entries:
-      - timestamp: "2025-10-30T13:00:00Z"
-        value: 88
-        reason: "Added rate limiting"
-        source: "manual"
-      - timestamp: "2025-11-30T13:00:00Z"
-        value: 94
-        reason: "mTLS added"
-        source: "manual"
-      - timestamp: "2025-12-30T13:00:00Z"
-        value: 98
-        reason: "mTLS + OAuth2 + rate limiting"
-        source: "manual"
+    - timestamp: '2025-10-30T13:00:00Z'
+      value: 88
+      reason: Added rate limiting
+      source: manual
+    - timestamp: '2025-11-30T13:00:00Z'
+      value: 94
+      reason: mTLS added
+      source: manual
+    - timestamp: '2025-12-30T13:00:00Z'
+      value: 98
+      reason: mTLS + OAuth2 + rate limiting
+      source: manual

@@ -1,41 +1,41 @@
 entity_id: Component:default/auth-service
 ranks:
-  tech_health:
+  tech-health:tech_health:
     entries:
-      - timestamp: "2025-10-22T12:00:00Z"
-        value: 86.0
-        label: A
-        score_snapshot:
-          documentation: 82
-          testing: 90
-          maintainability: 86
-      - timestamp: "2025-11-22T12:00:00Z"
-        value: 91.0
-        label: S
-        score_snapshot:
-          documentation: 88
-          testing: 95
-          maintainability: 90
-      - timestamp: "2025-12-22T12:00:00Z"
-        value: 92.3
-        label: S
-        score_snapshot:
-          documentation: 92
-          testing: 95
-          maintainability: 90
-  security_grade:
+    - timestamp: '2025-10-22T12:00:00Z'
+      value: 86.0
+      label: A
+      score_snapshot:
+        documentation: 82
+        testing: 90
+        maintainability: 86
+    - timestamp: '2025-11-22T12:00:00Z'
+      value: 91.0
+      label: S
+      score_snapshot:
+        documentation: 88
+        testing: 95
+        maintainability: 90
+    - timestamp: '2025-12-22T12:00:00Z'
+      value: 92.3
+      label: S
+      score_snapshot:
+        documentation: 92
+        testing: 95
+        maintainability: 90
+  security-audit:security_grade:
     entries:
-      - timestamp: "2025-10-28T12:00:00Z"
-        value: 97.0
-        label: S
-        score_snapshot:
-          vulnerability: 95
-          compliance: 98
-          access_control: 98
-      - timestamp: "2025-12-28T12:00:00Z"
-        value: 99.4
-        label: S
-        score_snapshot:
-          vulnerability: 98
-          compliance: 100
-          access_control: 100
+    - timestamp: '2025-10-28T12:00:00Z'
+      value: 97.0
+      label: S
+      score_snapshot:
+        vulnerability: 95
+        compliance: 98
+        access_control: 98
+    - timestamp: '2025-12-28T12:00:00Z'
+      value: 99.4
+      label: S
+      score_snapshot:
+        vulnerability: 98
+        compliance: 100
+        access_control: 100
